@@ -145,6 +145,10 @@ public class Calculator {
         act.doubleClick(six)
 		.click(sub).doubleClick(seven).click(res).perform();
 
+        
+        
+        //convert to testNG
+        //run using annotations 
        
     }
 }
