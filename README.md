@@ -23,8 +23,8 @@ The project demonstrates web UI automation, dynamic XPath locators, explicit wai
 - **Build Tool:** Maven (if configured in the project)
 - **Browser:** Google Chrome
 - **IDE:** Eclipse
-- **Website Under Test:** Calculator.net Scientific Calculator
-
+- **Website Under Test:** [Calculator.net Scientific Calculator
+](https://www.calculator.net/scientific-calculator.html)
 ## ✨ Features
 
 - Addition
