@@ -20,7 +20,7 @@ The project demonstrates web UI automation, dynamic XPath locators, explicit wai
 - **Programming Language:** Java
 - **Automation Tool:** Selenium WebDriver
 - **Testing Framework:** TestNG
-- **Build Tool:** Maven (if configured in the project)
+- **Build Tool:** Maven 
 - **Browser:** Google Chrome
 - **IDE:** Eclipse
 - **Website Under Test:** [Calculator.net Scientific Calculator
@@ -41,21 +41,34 @@ The project demonstrates web UI automation, dynamic XPath locators, explicit wai
 ## 📂 Project Structure
 
 ```text
+
 Selenium_Practice/
-├── src/test/java/
-│   └── Selenium_Automation_Practice/
-│       └── Selenium_Practice/
-│           ├── EnterNumber.java
-│           ├── Launch.java
-│           ├── Addition.java
-│           ├── Substraction.java
-│           ├── Multiplication.java
-│           └── Division.java
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── Selenium_Automation_Practice/
+│   │           ├── App.java
+│   │           └── Calculator.java
+│   │
+│   └── test/
+│       └── java/
+│           └── Selenium_Automation_Practice/
+│               ├── Addition.java
+│               ├── AppTest.java
+│               ├── Division.java
+│               ├── EnterNumber.java
+│               ├── Launch.java
+│               ├── Multiplication.java
+│               └── Substraction.java
+│
 ├── pom.xml
-└── README.md
+├── testng.xml
+├── README.md
+├── target/
+└── test-output/
+
 ```
 
-*Note: Adjust the folder structure to match your actual project.*
 
 ## ⚙️ Prerequisites
 
