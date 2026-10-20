@@ -73,21 +73,23 @@ public class Calculator {
         d.get("https://www.calculator.net/scientific-calculator.html");
 
         // Operators
-        WebElement add = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//span[normalize-space()='+']")));
-
-        WebElement sub = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//span[normalize-space()='−' or normalize-space()='–']")));
-
-        WebElement mult = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//span[normalize-space()='×']")));
-
-        WebElement div = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//span[normalize-space()='÷']")));
+//        WebElement add = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//span[normalize-space()='+']")));
+//
+//        WebElement sub = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//span[normalize-space()='−' or normalize-space()='–']")));
+//
+//        WebElement mult = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//span[normalize-space()='×']")));
+//
+//        WebElement div = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//span[normalize-space()='÷']")));
+//
+//        WebElement res = wait.until(ExpectedConditions.elementToBeClickable(
+//                By.xpath("//span[normalize-space()='=']")));
 
         WebElement res = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//span[normalize-space()='=']")));
-
+              By.xpath("//span[normalize-space()='=']")));
         // Numbers
         WebElement zero = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//span[normalize-space()='0']")));
@@ -118,34 +120,127 @@ public class Calculator {
 
         WebElement nine = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//span[normalize-space()='9']")));
+        
+        WebElement point = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='.']")));
 
         
-        //additon
-        act.click(five)
-           .click(add)
-           .click(six)
-           .click(res)
-           .perform();
+//        //additon
+//        act.click(five)
+//           .click(add)
+//           .click(six)
+//           .click(res)
+//           .perform();
+//        
+//        
+//        
+//        //multiplication
+//        act.doubleClick(six)
+//        		.click(mult).doubleClick(seven).click(res).perform();
+//        
+//        
+//        
+//        //division
+//        act.doubleClick(six)
+//		.click(div).doubleClick(seven).click(res).perform();
+//        
+//       
+//        
+//        //substraction
+//        act.doubleClick(six)
+//		.click(sub).doubleClick(seven).click(res).perform();
+
+        //logarithmic functions
         
-        
-        
-        //multiplication
-        act.doubleClick(six)
-        		.click(mult).doubleClick(seven).click(res).perform();
-        
-        
-        
-        //division
-        act.doubleClick(six)
-		.click(div).doubleClick(seven).click(res).perform();
-        
+        //sin
+        WebElement sin = d.findElement(By.xpath("//span[normalize-space()='sin']"));
        
+        //sin(30)=0.5
+        act.click(sin).click(three).click(zero).click(res).perform();
         
-        //substraction
-        act.doubleClick(six)
-		.click(sub).doubleClick(seven).click(res).perform();
-
+        //sin(45)
+        act.click(sin).click(four).click(five).click(res).perform();
         
+        //sin(60)
+        act.click(sin).click(six).click(zero).click(res).perform();
+        
+        //sin(90)
+        act.click(sin).click(nine).click(zero).click(res).perform();
+        
+        
+        //cos
+        WebElement cos = wait.until
+        					(ExpectedConditions.elementToBeClickable
+        							(d.findElement(By.xpath("//span[normalize-space()='cos']"))));
+        
+        //cos(30)
+        act.click(cos)
+        		.click(three)
+        		.click(zero)
+        		.click(res)
+        		.perform();
+        
+        //cos(45)
+        act.click(cos)
+		.click(four)
+		.click(five)
+		.click(res)
+		.perform();
+        
+        //cos(60)
+        act.click(cos)
+		.click(six)
+		.click(zero)
+		.click(res)
+		.perform();
+        
+        //cos(90)
+        act.click(cos)
+		.click(nine)
+		.click(zero)
+		.click(res)
+		.perform();
+        
+        
+        //tan
+        WebElement tan = wait.until
+				(ExpectedConditions.elementToBeClickable
+						(d.findElement(By.xpath("//span[normalize-space()='tan']"))));
+        
+        //tan(30)
+        act.click(tan)
+		.click(three)
+		.click(zero)
+		.click(res)
+		.perform();
+        
+        //tan(60)
+        act.click(cos)
+		.click(six)
+		.click(zero)
+		.click(res)
+		.perform();
+        
+        //tan(90)
+        act.click(cos)
+		.click(nine)
+		.click(zero)
+		.click(res)
+		.perform();
+        
+        //sin-1
+        WebElement sin1 = wait.until(ExpectedConditions.elementToBeClickable(
+        						d.findElement(By.xpath("//*[@id=\"sciout\"]/div[2]/div[2]/span[1]"))));
+        
+        act.click(sin1).click(point).
+        click(five).click(res).perform();
+        
+        WebElement cos1 = wait.until(ExpectedConditions.elementToBeClickable(
+        						By.xpath("//*[@id=\"sciout\"]/div[2]/div[2]/span[2]")));
+        act.click(cos1).click(point).click(five).click(res).perform();
+        
+        WebElement tan1 = wait.until(ExpectedConditions.elementToBeClickable(
+        								By.xpath("//*[@id=\"sciout\"]/div[2]/div[2]/span[3]")));
+        act.click(tan1).click(point).click(five).click(res).perform();
         
         //convert to testNG
         //run using annotations 
