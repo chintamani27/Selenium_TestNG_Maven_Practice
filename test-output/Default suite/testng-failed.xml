@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Selenium_Automation_Practice.Selenium_Practice.Multiplication">
+      <class name="Selenium_Automation_Practice.Selenium_Practice.Addition">
         <methods>
           <include name="enterNumber"/>
-          <include name="sub"/>
           <include name="launch"/>
+          <include name="close"/>
           <include name="add"/>
         </methods>
-      </class> <!-- Selenium_Automation_Practice.Selenium_Practice.Multiplication -->
+      </class> <!-- Selenium_Automation_Practice.Selenium_Practice.Addition -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

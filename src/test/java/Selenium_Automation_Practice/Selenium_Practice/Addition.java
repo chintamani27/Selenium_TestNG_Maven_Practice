@@ -37,7 +37,7 @@ public class Addition extends Launch {
 			WebElement res = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"sciout\"]/div[3]/div[5]/span[4]")));
 			res.click();
 			
-			sc.close();
+			
 		}
 	
 }
