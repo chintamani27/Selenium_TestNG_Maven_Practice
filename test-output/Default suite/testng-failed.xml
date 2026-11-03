@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Selenium_Automation_Practice.Selenium_Practice.Addition">
+      <class name="tests.ArithmeticTest">
         <methods>
-          <include name="enterNumber"/>
-          <include name="launch"/>
-          <include name="close"/>
-          <include name="add"/>
+          <include name="divisionTest"/>
+          <include name="closeDriver"/>
+          <include name="additionTest"/>
+          <include name="multiplicationTest"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- Selenium_Automation_Practice.Selenium_Practice.Addition -->
+      </class> <!-- tests.ArithmeticTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
